@@ -1,0 +1,19 @@
+<div class="grid">
+    <div class="col piccol">
+        <h1>Picture of the Day</h1>
+        <div class="card flex justify-content-center">
+            <p-card header="{{pic.title}}" [style]="{ width: '600px' }">
+                <ng-template pTemplate="header">
+                    <img alt="Picture of the Day" src="{{pic.url}}" />
+                </ng-template>
+                <p class="m-0">
+                    {{pic.date}}
+                </p>
+                <hr>
+                <p class="m-0">
+                    {{pic.explanation}}
+                </p>
+            </p-card>
+        </div>
+    </div>
+</div>
