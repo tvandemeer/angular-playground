@@ -3,11 +3,12 @@ import { Component, OnInit } from '@angular/core';
 import { ApiHttpService } from '../services/api-http.service';
 import { PicOfDay } from '../interfaces/pic-of-day.interface';
 import { CardModule } from 'primeng/card';
+import { TagModule } from 'primeng/tag';
 
 @Component({
   selector: 'app-pic-of-day',
   standalone: true,
-  imports: [CardModule],
+  imports: [CardModule, TagModule],
   templateUrl: './pic-of-day.component.html',
   styleUrl: './pic-of-day.component.css'
 })
