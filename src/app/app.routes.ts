@@ -3,7 +3,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 
 export const routes: Routes = [
     {
-        path: 'testing',
-        component: NavbarComponent
+
     }
 ];

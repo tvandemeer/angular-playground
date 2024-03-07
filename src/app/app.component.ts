@@ -10,5 +10,5 @@ import { PicOfDayComponent } from './pic-of-day/pic-of-day.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'PrimeNg';
+  title = 'Picture of the Day';
 }

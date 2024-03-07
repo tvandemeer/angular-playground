@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { PicOfDay } from '../interfaces/pic-of-day.interface';
+import { Picture } from '../models/Picture';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +15,11 @@ export class ApiHttpService {
   private apiUrl = 'https://api.nasa.gov/planetary/apod?api_key=';
 
   GetPicOfDay(): Observable<any> {
-    return this.http.get<PicOfDay>(this.apiUrl + this.API_KEY);
+    return this.http.get<Picture>(this.apiUrl + this.API_KEY);
   }
+
+  // GetRandomPics(): Observable<Picture[]> {
+  //   // return n random pics
+  // }
   
 }
