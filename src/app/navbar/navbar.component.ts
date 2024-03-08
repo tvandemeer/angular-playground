@@ -5,19 +5,26 @@ import { MenubarModule } from 'primeng/menubar';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [
-    MenubarModule
-  ],
+  imports: [MenubarModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+
   items: MenuItem[] = [
     {
-      label: 'Home'
-    },
-    {
-      label: 'Contact'
+      label: 'Menu',
+      items: [
+        {
+          label: 'Picture of the Day',
+          routerLink: '/'
+        },
+        {
+          label: 'Random Pictures',
+          routerLink: '/random'
+        }
+      ]
     }
   ];
+  
 }

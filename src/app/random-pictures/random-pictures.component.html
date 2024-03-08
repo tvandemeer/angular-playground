@@ -1,0 +1,19 @@
+<div class="grid">
+    <div class="col-12 md:col-8 lg:col-6 md:col-offset-2 lg:col-offset-3">
+        <h1>Random Pictures</h1>
+        <p-galleria [value]="images" [responsiveOptions]="responsiveOptions" [containerStyle]="{ 'max-width': '640px' }"
+            [showThumbnails]="false" [autoPlay]="true" [circular]="true">
+            <ng-template pTemplate="item" let-item>
+                <img [src]="item.url" [alt]="item.title" [style]="{ 'max-width': '640px' }" />
+            </ng-template>
+            <ng-template pTemplate="caption" let-item>
+                <h2>{{item.title}}</h2>
+            </ng-template>
+            <ng-template pTemplate="thumbnail" let-item>
+                <div class="grid grid-nogutter justify-content-center">
+                    <img [src]="item.thumbnail_url" />
+                </div>
+            </ng-template>
+        </p-galleria>
+    </div>
+</div>
