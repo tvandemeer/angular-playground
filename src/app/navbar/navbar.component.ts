@@ -20,8 +20,12 @@ export class NavbarComponent {
           routerLink: '/'
         },
         {
-          label: 'Random Pictures',
+          label: 'Galleria',
           routerLink: '/random'
+        },
+        {
+          label: 'Carousel',
+          routerLink: '/carousel'
         }
       ]
     }

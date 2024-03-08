@@ -12,7 +12,12 @@ import { APODService } from '../services/apod.service';
 export class RandomPicturesComponent implements OnInit {
   
   images: any[] = [];
-  responsiveOptions: GalleriaResponsiveOptions[] = [];
+  responsiveOptions: GalleriaResponsiveOptions[] = [
+    {
+      breakpoint: '640px',
+      numVisible: 1
+    }
+  ];
 
   constructor(private apodService: APODService) {}
   
