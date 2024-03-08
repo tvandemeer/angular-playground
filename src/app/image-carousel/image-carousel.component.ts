@@ -17,7 +17,7 @@ export class ImageCarouselComponent implements OnInit {
   responsiveOptions: CarouselResponsiveOptions[] = [
     {
       breakpoint: '640px',
-      numVisible: 3,
+      numVisible: 1,
       numScroll: 1
     }
   ];
