@@ -6,7 +6,12 @@
         <div class="card flex justify-content-center">
             <p-card header="{{pic.title}}">
                 <ng-template pTemplate="header">
-                    <img alt="Picture of the Day" src="{{pic.url}}" />
+                    <img alt="Picture of the Day" class="zoom" src="{{pic.url}}" (click)="op.show($event)" />
+
+                    <p-overlayPanel #op>
+                        <img src="{{pic.hdurl}}" alt="product" [style]="{ 'max-width': '100vw' }" />
+                    </p-overlayPanel>
+
                 </ng-template>
                 <p class="m-0">
                     <p-tag value="{{pic.date}}"></p-tag>

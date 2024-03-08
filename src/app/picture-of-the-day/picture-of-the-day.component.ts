@@ -5,11 +5,12 @@ import { APODService } from '../services/apod.service';
 import { Picture } from '../models/Picture';
 import { RatingModule } from 'primeng/rating';
 import { FormsModule } from '@angular/forms';
+import { OverlayPanelModule } from 'primeng/overlaypanel';
 
 @Component({
   selector: 'app-picture-of-the-day',
   standalone: true,
-  imports: [CardModule, TagModule, RatingModule, FormsModule],
+  imports: [CardModule, TagModule, RatingModule, FormsModule, OverlayPanelModule],
   templateUrl: './picture-of-the-day.component.html',
   styleUrl: './picture-of-the-day.component.css'
 })
