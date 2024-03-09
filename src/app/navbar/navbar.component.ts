@@ -16,10 +16,10 @@ export class NavbarComponent {
       label: 'Menu',
       items: [
         {label: 'Picture of the Day', routerLink: '/'},
-        {label: 'Galleria', routerLink: '/random'},
+        {label: 'Galleria', routerLink: '/galleria'},
         {label: 'Carousel', routerLink: '/carousel'},
         {label: 'Random User', routerLink: '/user'},
-        {label: 'Tiered Menu', routerLink: '/menu'}
+        {label: 'Tiered Menu', routerLink: '/tiered'}
           
       ]
     }

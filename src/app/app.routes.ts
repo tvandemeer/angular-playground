@@ -6,9 +6,9 @@ import { RandomUserComponent } from './random-user/random-user.component';
 import { TieredMenuComponent } from './tiered-menu/tiered-menu.component';
 
 export const routes: Routes = [
-    {path: 'random', component: RandomPicturesComponent},
+    {path: 'galleria', component: RandomPicturesComponent},
     {path: 'carousel', component: ImageCarouselComponent},
     {path: 'user', component: RandomUserComponent},
-    {path: 'menu', component: TieredMenuComponent},
+    {path: 'tiered', component: TieredMenuComponent},
     {path: '', component: PictureOfTheDayComponent}
 ];

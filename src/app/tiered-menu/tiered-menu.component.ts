@@ -24,20 +24,107 @@ export class TieredMenuComponent implements OnInit {
 
   items: MenuItem[] = [
     {
-      label: 'One',
+      label: "Categorie 1",
       items: [
         {
-          label: 'Sub One 1',
-          routerLink: 'menu'
+          label: "Categorie 1.1",
+          items: [
+            {
+              label: "Item 1.1.1",
+              routerLink: "/menu"
+            },
+            {
+              label: "Item 1.1.2",
+              routerLink: "/menu"
+            }
+          ]
         },
         {
-          label: 'Sub One 2',
-          routerLink: 'menu'
+          label: "Categorie 1.2",
+          items: [
+            {
+              label: "Item 1.2.1",
+              items: [
+                {
+                  label: "Item 1.2.1.1",
+                  routerLink: "/menu"
+                },
+                {
+                  label: "Item 1.2.1.2",
+                  routerLink: "/menu"
+                }
+              ]
+            },
+            {
+              label: "Item 1.2.2",
+              routerLink: "/menu"
+            }
+          ]
         }
       ]
     },
     {
-      label: 'Two'
+      label: "Categorie 2",
+      items: [
+        {
+          label: "Categorie 2.1",
+          items: [
+            {
+              label: "Item 2.1.1",
+              routerLink: "/menu"
+            },
+            {
+              label: "Item 2.1.2",
+              items: [
+                {
+                  label: "Item 2.1.2.1",
+                  routerLink: "/menu"
+                },
+                {
+                  label: "Item 2.1.2.2",
+                  routerLink: "/menu"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      label: "Categorie 3",
+      items: [
+        {
+          label: "Categorie 3.1",
+          items: [
+            {
+              label: "Item 3.1.1",
+              routerLink: "/menu"
+            },
+            {
+              label: "Item 3.1.2",
+              routerLink: "/menu"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      label: "Categorie 4",
+      items: [
+        {
+          label: "Categorie 4.1",
+          items: [
+            {
+              label: "Item 4.1.1",
+              routerLink: "/menu"
+            },
+            {
+              label: "Item 4.1.2",
+              routerLink: "/menu"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
