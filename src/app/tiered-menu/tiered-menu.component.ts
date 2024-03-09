@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { TieredMenuModule } from 'primeng/tieredmenu';
+import { ResourcesService } from '../services/resources.service';
+import { Resource } from '../models/Resource';
 
 @Component({
   selector: 'app-tiered-menu',
@@ -9,7 +11,17 @@ import { TieredMenuModule } from 'primeng/tieredmenu';
   templateUrl: './tiered-menu.component.html',
   styleUrl: './tiered-menu.component.css'
 })
-export class TieredMenuComponent {
+export class TieredMenuComponent implements OnInit {
+
+  constructor(private resourcesService: ResourcesService) {}
+  
+  resources: Resource[];
+
+  ngOnInit(): void {
+    this.resourcesService.GetResources()
+      .subscribe(res => this.resources = res);
+  }
+
   items: MenuItem[] = [
     {
       label: 'One',
