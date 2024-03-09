@@ -1,0 +1,55 @@
+<div class="grid">
+    <div class="col-12 md:col-8 lg:col-6 md:col-offset-2 lg:col-offset-3">
+        <p-accordion [activeIndex]="0" [style]="{'margin-top':'1.5rem'}">
+            <p-accordionTab>
+                <ng-template pTemplate="header">
+                    <span class="flex align-items-center gap-2 w-full">
+                        <span class="font-bold white-space-nowrap"><i class="pi pi-user"></i>&nbsp;Profile</span>
+                    </span>
+                </ng-template>
+                <div class="grid">
+                    <div class="col-12 sm:col-6">
+                        <img src="{{user.picture.large}}" alt="profile picture" />
+                    </div>
+                    <div class="col-12 sm:col-6">
+                        <p>Title: <b>{{user.name.title}}</b></p>
+                        <p>Name: <b>{{user.name.first}} {{user.name.last}}</b></p>
+                        <p>Nationality: <b>{{user.nat}}</b></p>
+                        <p>Gender: <b>{{user.gender}}</b></p>
+                        <p>Age: <b>{{user.dob.age}}</b></p>
+                    </div>
+                </div>
+            </p-accordionTab>
+            <p-accordionTab>
+                <ng-template pTemplate="header">
+                    <span class="flex align-items-center gap-2 w-full">
+                        <span class="font-bold white-space-nowrap"><i class="pi pi-map-marker"></i>&nbsp;Location</span>
+                    </span>
+                </ng-template>
+                <div class="grid">
+                    <div class="col-12 sm:col-6">
+                        <p>Country: <b>{{user.location.country}}</b></p>
+                        <p>State: <b>{{user.location.state}}</b></p>
+                        <p>City: <b>{{user.location.city}}</b></p>
+                        <p>Street: <b>{{user.location.street.number}} {{user.location.street.name}}</b></p>
+                    </div>
+                    <div class="col-12 sm:col-6">
+                        <img src="https://flagcdn.com/h120/{{natcode}}.png" alt="flag" />
+                    </div>
+                </div>
+            </p-accordionTab>
+            <p-accordionTab>
+                <ng-template pTemplate="header">
+                    <span class="flex align-items-center gap-2 w-full">
+                        <span class="font-bold white-space-nowrap"><i class="pi pi-envelope"></i>&nbsp;Contact</span>
+                    </span>
+                </ng-template>
+                <p>Email: <b>{{user.email}}</b></p>
+                <p>Phone: <b>{{user.phone}}</b></p>
+                <p>Cell: <b>{{user.cell}}</b></p>
+            </p-accordionTab>
+        </p-accordion>
+    </div>
+</div>
+
+{{flag}}
